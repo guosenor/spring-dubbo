@@ -5,7 +5,7 @@ WORKDIR app
 COPY .mvn .mvn
 COPY mvnw mvnw
 RUN chmod -R 755 mvnw
-RUN ls -lh
+RUN ./mvnw -v
 COPY pom.xml pom.xml
 RUN ./mvnw package -f pom.xml
 COPY src src
