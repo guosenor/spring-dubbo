@@ -1,5 +1,7 @@
 FROM java:8
 # EXPOSE 8080
+RUN mkdir app
+WORKDIR app
 COPY .mvn .mvn
 COPY mvnw mvnw
 RUN chmod -R 755 mvnw
